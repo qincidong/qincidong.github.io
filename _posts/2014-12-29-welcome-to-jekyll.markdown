@@ -3,7 +3,7 @@ layout: post
 title:  第一次在github上发布文章
 date:   2014-12-29 16:49:39
 categories: blog
-tags:github
+tags: Jekyll github Markdown
 ---
 很早之前也了解过在github上搭建博客发表文章，但那时候只是看了一看。
 我现在之所以选择在github上写博客，最主要的原因在于任何内容都可以自定义。

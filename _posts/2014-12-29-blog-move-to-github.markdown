@@ -3,7 +3,7 @@ layout: post
 title:  Spring AOP配置
 date:   2014-12-29 16:49:39
 categories: blog
-tags: Jekyll github Markdown
+tags: Spring Aop
 ---
 ###一、XML配置方式###
 ####1.创建一个Service类####

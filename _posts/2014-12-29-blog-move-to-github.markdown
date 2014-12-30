@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Spring AOP配置
+description: 使用XML和Annotation方式实现Spring AOP
 date:   2014-12-29 16:49:39
 categories: blog
 tags: Spring Aop

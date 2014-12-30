@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  第一次在github上发布文章
+description: 很早就想在github上发布博客文章了，今天终于有机会~~~
 date:   2014-12-29 16:49:39
 categories: blog
 tags: Jekyll github Markdown

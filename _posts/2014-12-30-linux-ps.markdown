@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Linux下查看和结束进程
+description: Linux下查看和结束进程，查看日志命令的使用。这些是日常使用的命令。
 date:   2014-12-30 10:12
 categories: blog
 tags: linux ps

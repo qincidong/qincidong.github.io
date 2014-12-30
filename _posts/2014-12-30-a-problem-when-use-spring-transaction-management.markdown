@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  记录一个使用Spring注解事务管理遇到的问题
+description: 使用Spring注解管理事务必须注意始终只能有一个事务。因为有时候很难发现问题。
 date:   2014-12-29 16:49:39
 categories: blog
 tags: Spring 事务 注解

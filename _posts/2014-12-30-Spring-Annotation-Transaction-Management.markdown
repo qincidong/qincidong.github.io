@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Spring注解式事务管理配置
+description: 本文讲述如何使用Spring注解事务管理配置。
 date:   2014-12-30 09:28
 categories: blog
 tags: Spring 事务 注解

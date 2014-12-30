@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  jQuery图片裁剪问题记录
+description: jQuery图片裁剪在手机上裁剪图片，发现偶尔图片上没有出现裁剪框。最后发现可能是图片在JS之前加载的原因导致的。
 date:   2014-12-29 16:49:39
 categories: blog
 tags: jQuery 图片 jquery.Jcrop

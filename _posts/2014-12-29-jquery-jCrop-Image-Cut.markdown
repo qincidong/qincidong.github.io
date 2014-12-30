@@ -8,7 +8,8 @@ tags: jQuery 图片 jquery.Jcrop
 ---
 ###问题描述
 
-这个是给周大福做的LOMO打印机需求，在手机上裁剪图片保存时报下面的错误：
+这个是给周大福做的LOMO打印机需求，在手机上裁剪图片保存时报下面的错误：  
+{% highlight java %}
 /wxsmart/cutSuccess?photourl=/upload/picmsg/1423/4599111449.jpg&memberid=572&x=0&y=0&w=0&h=0&wh=149&ww=224] INFO  com.msp.wxcrm.dao.TsmartSetDao - findByProperty
 java.lang.IllegalArgumentException: Width (800) and height (0) cannot be <= 0
 	at java.awt.image.DirectColorModel.createCompatibleWritableRaster(DirectColorModel.java:999)
@@ -66,10 +67,11 @@ java.lang.IllegalArgumentException: Width (800) and height (0) cannot be <= 0
 	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
 	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
 	at java.lang.Thread.run(Thread.java:619)
+{% endhighlight %}
 
-	页面没有显示截图的边框。
-	裁剪的代码如下：
-	{% highlight jsp %}
+页面没有显示截图的边框。  
+裁剪的代码如下：  
+{% highlight jsp %}
 	<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ include file="/commons/taglibs.jsp" %>
 <!DOCTYPE html>
@@ -163,7 +165,9 @@ java.lang.IllegalArgumentException: Width (800) and height (0) cannot be <= 0
 		<script src="${fileUrlPrx}/scripts/wap/jquery.Jcrop.min.js"></script>
 	</body>
 </html>
-	{% endhighlight %}
-	使用的是jquery.Jcrop插件，而且出现这个问题只有在首次关注使用时才会有。我也看了Jcrop的API，都没问题。
-	最后发现JS的顺序可能导致了这个问题。如上，图片在jquery.js,jquery.jscrop.min.js之前加载完毕。
-	图片加载完毕之后就会执行doCut方法，如果这个时候2个JS还没有加载完毕，就会导致JS错误。这样的话肯定显示不了裁剪的边框，所以w,h都为0.
+{% endhighlight %}
+使用的是jquery.Jcrop插件，而且出现这个问题只有在首次关注使用时才会有。我也看了Jcrop的API，都没问题。  
+最后发现JS的顺序可能导致了这个问题。如上，图片在jquery.js,jquery.jscrop.min.js之前加载完毕。  
+图片加载完毕之后就会执行doCut方法，如果这个时候2个JS还没有加载完毕，就会导致JS错误。这样的话肯定显示不了裁剪的边框，所以w,h都为0.  
+
+jQuery Jcrop 图像裁剪使用参考：[jQuery Jcrop 图像裁剪](http://code.ciaoca.com/jquery/jcrop/)

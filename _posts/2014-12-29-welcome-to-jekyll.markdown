@@ -10,3 +10,4 @@ tags: Jekyll github Markdown
 我现在之所以选择在github上写博客，最主要的原因在于任何内容都可以自定义。
 用过ITEYE，CSDN，博客园等，都没办法自定义页面内容，布局等。本来打算自己根据晚上的内容自己搭建的，但我前端基础比较差，我做后端开发的。
 所以效果不满意，最后看到了hahaya的Github博客，clone了一份。懒的折腾，专心写博客吧。
+写文章使用Markdown语法，[Markdown语法说明](http://wowubuntu.com/markdown/#img)。

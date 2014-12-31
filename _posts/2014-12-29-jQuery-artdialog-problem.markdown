@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  使用artDialog时遇到的问题
-description: artDialog是一个相当好用的对话框插件。用法可以参考：[http://aui.github.io/artDialog/doc/index.html#api-show](http://aui.github.io/artDialog/doc/index.html#api-show)。  但我使用时遇到了下面的问题
+description: artDialog是一个相当好用的对话框插件。用法可以参考：<a href="http://aui.github.io/artDialog/doc/index.html#api-show">http://aui.github.io/artDialog/doc/index.html#api-show</a>。  但我使用时遇到了下面的问题
 date:   2014-12-29 16:49:39
 categories: blog
 tags: jQuery artdialog

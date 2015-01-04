@@ -13,22 +13,22 @@ tags: maven hibernate 0配置
 pom.xml文件：
 {% highlight xml %}
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>com.purple_river.itat.maven.demo.user.dao</groupId>
-  <artifactId>user-dao</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>user-dao</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.purple_river.itat.maven.demo.user.dao</groupId>
+    <artifactId>user-dao</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <name>user-dao</name>
+    <url>http://maven.apache.org</url>
+    
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -410,7 +410,7 @@ public class TestUserDao {
         userDao = null;
     }
 }
-{% endhighlight %}
+{% endhighlight %} 
 
 之所以记录下来，是因为搭建环境时遇到了一些错误，所以这里记录对以后有个参考。  
 下载地址：[user-dao.rar](http://files.cnblogs.com/luckystar/user-dao.rar)

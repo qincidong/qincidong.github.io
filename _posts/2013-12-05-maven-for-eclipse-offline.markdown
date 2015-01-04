@@ -25,3 +25,4 @@ C:/Program Files/Java/jdk1.6.0_20/bin/javaw.exe
 {% endhighlight %}
 
 Ok，这样打开Eclipse，到window->preferences，输入maven，你可以看到maven已经被集成进来了。
+![tip](http://171.13.14.118/share.php?method=Share.download&cqid=be2fbc2fdaba27acfbf5d3916595a811&dt=51.92a0aace1b4485290bd0ea9ceeb11368&e=1420192242&fhash=ea177e46e209af134db52ce8771f28b339d5d8b4&fname=QQ%E6%88%AA%E5%9B%BE20141202145749.png&fsize=14770&nid=14175908454966895&scid=51&st=08bf1a21337ed5d9138ff01ae67d7f95&xqid=103776276)

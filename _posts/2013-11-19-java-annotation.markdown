@@ -205,11 +205,11 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ClassAnnotation {
-   String url();
-   RequestMethod method() default RequestMethod.POST;
-   enum RequestMethod {
-      GET,POST
-   }
+    String url();
+    RequestMethod method() default RequestMethod.POST;
+    enum RequestMethod {
+    GET,POST
+    }
 }
 {% endhighlight %}
 

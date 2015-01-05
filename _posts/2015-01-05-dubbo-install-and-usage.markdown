@@ -138,9 +138,31 @@ zookeeper.jar
     <version>2.5.3</version>
 </dependency>
 {% endhighlight %}        
-实际上是下面几个文件：
+是下面几个文件：
 ![img](http://uploadingit.com/file/g6o5pbahoujer7ec/QQ%E6%88%AA%E5%9B%BE20150105145834.png)
 这个是使用的multicast，参考：[http://alibaba.github.io/dubbo-doc-static/User+Guide-zh.htm](http://alibaba.github.io/dubbo-doc-static/User+Guide-zh.htm)
+
+如果是zookeeper形式，添加下面的依赖：
+{% highlight xml %}
+<dependencies>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>dubbo</artifactId>
+        <version>2.5.3</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.zookeeper</groupId>
+        <artifactId>zookeeper</artifactId>
+        <version>3.5.0-alpha</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.sgroschupf</groupId>
+        <artifactId>zkclient</artifactId>
+        <version>0.1</version>
+    </dependency>
+</dependencies>
+{% endhighlight %}    
 
 #####4、用Spring配置声明暴露服务：
 新建applicationProvider.xml，配置内容如下：

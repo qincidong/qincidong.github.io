@@ -1,7 +1,7 @@
 # Site settings
 title: luckystar's blog
 email: qincidong@qq.com
-permalink: /:title
+#permalink: /:title
 paginate: 6
 pygments: true
 paginate_path: /page:num

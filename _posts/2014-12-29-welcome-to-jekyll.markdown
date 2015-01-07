@@ -15,3 +15,4 @@ tags: Jekyll github Markdown
 博客搭建参考：  
 [http://blog.csdn.net/on_1y/article/details/19259435](http://blog.csdn.net/on_1y/article/details/19259435)  
 [http://www.heiniuhaha.com/lessons/2012/08/09/use-jekyll-build-blog/](http://www.heiniuhaha.com/lessons/2012/08/09/use-jekyll-build-blog/)
+[http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html](http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html)

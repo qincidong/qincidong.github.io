@@ -11,3 +11,7 @@ tags: Jekyll github Markdown
 用过ITEYE，CSDN，博客园等，都没办法自定义页面内容，布局等。本来打算自己根据晚上的内容自己搭建的，但我前端基础比较差，我做后端开发的。
 所以效果不满意，最后看到了hahaya的Github博客，clone了一份。懒的折腾，专心写博客吧。
 写文章使用Markdown语法，[Markdown语法说明](http://wowubuntu.com/markdown/#img)。
+
+博客搭建参考：  
+[http://blog.csdn.net/on_1y/article/details/19259435](http://blog.csdn.net/on_1y/article/details/19259435)  
+[http://www.heiniuhaha.com/lessons/2012/08/09/use-jekyll-build-blog/](http://www.heiniuhaha.com/lessons/2012/08/09/use-jekyll-build-blog/)

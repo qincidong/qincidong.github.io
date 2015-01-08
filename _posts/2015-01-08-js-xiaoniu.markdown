@@ -7,7 +7,7 @@ categories: blog
 tags:  javascript 前端
 ---
 ![http://www.w3cfuns.com/data/attachment/album/201501/07/105130fmjmzoeq2fylzzh3.gif](http://www.w3cfuns.com/data/attachment/album/201501/07/105130fmjmzoeq2fylzzh3.gif)
-![http://www.w3cfuns.com/data/attachment/album/201501/07/105143h7c4rk3zplkppxtk.gif)(http://www.w3cfuns.com/data/attachment/album/201501/07/105143h7c4rk3zplkppxtk.gif)
+![http://www.w3cfuns.com/data/attachment/album/201501/07/105143h7c4rk3zplkppxtk.gif](http://www.w3cfuns.com/data/attachment/album/201501/07/105143h7c4rk3zplkppxtk.gif)
 ![http://www.w3cfuns.com/data/attachment/album/201501/07/105145il2kp2ndvgw5v9tv.gif](http://www.w3cfuns.com/data/attachment/album/201501/07/105145il2kp2ndvgw5v9tv.gif)
 ![http://www.w3cfuns.com/data/attachment/album/201501/07/105146jljfyxafgzf0gycf.gif](http://www.w3cfuns.com/data/attachment/album/201501/07/105146jljfyxafgzf0gycf.gif)
 ![http://www.w3cfuns.com/data/attachment/album/201501/07/105148lm7y1rm759b56rjr.gif](http://www.w3cfuns.com/data/attachment/album/201501/07/105148lm7y1rm759b56rjr.gif)

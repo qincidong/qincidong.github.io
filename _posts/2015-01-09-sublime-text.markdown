@@ -142,13 +142,29 @@ UE、Notepad++都有多行编辑的模式，在sublime text中也不例外。
 ###11.快速查找某个文件
 按ctrl+p，输入文件名，sublime text有模糊匹配，不用输入完整。如果相同文件名的文件有很多，但你知道你要找的文件的某个路径，你输入路径就可以了。
 
-###12.安装git插件
+###12.安装和git插件
+1）安装git插件
 ctrl+shift+p调出命令面板，输入install，在弹出的窗口中输入git，选择git，回车进行安装。  
-这个时候Sublime Text只是安装了git插件，但还不能使用git命令，需要在修改Sublimt Text针对git的配置文件
+这个时候Sublime Text只是安装了git插件，但还不能使用git命令，需要在修改Sublimt Text针对git的配置文件  
 在git->user settings中增加：
 {% highlight json %}
 {
 	"git_command":"D:/Git/cmd/git.exe"
 }
 {% endhighlight %}
-指向的是你的git程序中的git.exe文件。注意：git的安装路径不能有空格，否则git命令显示乱码。
+指向的是你的git程序中的git.exe文件。注意：git的安装路径不能有空格，否则git命令显示乱码。  
+
+2）使用Git插件  
+到这里位置，所有的本地环境的配置已经完成。接下来讲讲具体怎么使用Sublime Text 中的git插件连接GitHub。  
+首先在Sublime text 打开想要使用git同步的项目目录  
+然后使用“Ctrl+Shift+p”打开命令窗口，输入“Git:init”来初始化git化境。 ST2会让你选择需要初始化的Git目录，选择到你的工程目录即可。  
+之后就可以正常的使用git命令了。  
+使用Git:status来查看当前的状态。  
+输入命令后，在弹出窗口中会显示出本地的项目更改状态。  
+选择更改的文件，可以直接看到更改的地方，git的diff功能：  
+接下来是用git:add命令添加新增加的文件。  
+选择“including untracked files”，将新增加的README.md添加到更改当中。
+
+使用git:commit，来提交更改。Sublime Text会自动跳出一个文本文件，你可以在文件的最上方输入这次更改的comments，然后直接关闭这个文件，就会出  发commit操作。并且将你输入的comments座位-m的参数。 这个是非常方便的，比用命令行运行commit 用-  m参数添加评论的方式要方便很多，而且可以随便修改。ctrl+w关闭文件的同时，commit操作自动触发。  
+
+接下来的步骤应该是添加远程仓库(remote repository)，而在Sublime Text中我始终没有找到这条命令，于是只能用命令行去执行了。  

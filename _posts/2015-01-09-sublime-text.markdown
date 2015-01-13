@@ -122,6 +122,12 @@ UE、Notepad++都有多行编辑的模式，在sublime text中也不例外。
 2）选中一部分字符，按alt+f3，这样相同的都会选中并出现一个光标可以输入。  
 3）按住shift，然后按鼠标右键，然后向下拉。  
 
+有时我们需要对一片区域的所有行进行同时编辑， Ctrl + Shift + L 可以将当前选中区域打散，然后进行同时编辑：
+![img](http://img0.tuicool.com/JJVRF3.gif)
+
+有打散自然就有合并， Ctrl + J 可以把当前选中区域合并为一行：
+![img](http://img1.tuicool.com/fQVrei.gif)
+
 ##6.复制代码时格式化
 从一个文件复制一段代码到另一个文件中，输入直接ctrl+v，则代码时乱的。如果想让代码格式化，可以按ctrl+shift+v。
 
@@ -195,3 +201,110 @@ E1D0AE85 A0BBD039 0E9C8D55 E1B89D5D
 B98FC99C 8FAC73EE D2B95564 DF450523
 </pre>
 
+##14.快速查找&替换
+多数情况下，我们需要查找文中某个关键字出现的其它位置，这时并不需要重新将该关键字重新输入一遍然后搜索，我们只需要使用 Shift + ←/→ 或 Ctrl + D 选中关键字，然后 F3 跳到其下一个出现位置， Shift + F3 跳到其上一个出现位置，此外还可以用 Alt + F3 选中其出现的所有位置（之后可以进行多重编辑，也就是快速替换）。
+![img](http://img2.tuicool.com/ANRj2qF.gif)
+
+##15.标准查找&替换
+
+另一种常见的使用场景是搜索某个已知但不在当前显示区域的关键字，这时可以使用 Ctrl + F 调出搜索框进行搜索：
+![img](http://img0.tuicool.com/EnENBvm.jpg)
+以及使用 Ctrl + H 进行替换：
+![img](http://img1.tuicool.com/qY3iau.jpg)
+关键字查找&替换
+
+对于普通用户来说，常规的关键字搜索就可以满足其需求：在搜索框输入关键字后 Enter 跳至关键字当前光标的下一个位置， Shift + Enter 跳至上一个位置， Alt + Enter 选中其出现的所有位置（同样的，接下来可以进行快速替换）。
+
+Sublime Text的查找有不同的模式： Alt + C 切换大小写敏感（Case-sensitive）模式， Alt + W 切换整字匹配（Whole matching）模式，除此之外Sublime Text还支持在选中范围内搜索（Search in selection），这个功能没有对应的快捷键，但可以通过以下配置项自动开启。
+<pre>
+	"auto_find_in_selection": true
+</pre>
+这样之后在选中文本的状态下范围内搜索就会自动开启，配合这个功能，局部重命名（Local Renaming）变的非常方便：
+![img](http://img2.tuicool.com/UFNVBz.gif)
+
+使用 Ctrl + H 进行标准替换，输入替换内容后，使用 Ctrl + Shift + H 替换当前关键字， Ctrl + Alt + H 替换所有匹配关键字。
+
+##16.正则表达式查找&替换
+
+正则表达式 是非常强大的文本查找&替换工具，Sublime Text中使用 Alt + R 切换正则匹配模式的开启/关闭。Sublime Text的使用 Boost里的Perl正则表达式风格 。
+
+出于篇幅原因，本文不会对正则表达式进行详细介绍， Mastering Regex （中译本： 精通正则表达式 ）对正则表达式的原理和各语言下的使用进行了详细介绍。此外网上有大量正则表达式的优秀教程（ “正则表达式30分钟入门教程” 和 MSDN正则表达式教程 .aspx)），以及在线测试工具（ regexpal 和 regexer ）。
+
+##17.多文件搜索&替换
+
+使用 Ctrl + Shift + F 开启多文件搜索&替换（注意此快捷键和搜狗输入法的简繁切换快捷键有冲突）：
+![img](http://img0.tuicool.com/A3uy2uy.jpg)
+多文件搜索&替换默认在当前打开的文件和文件夹进行搜索/替换，我们也可以指定文件/文件夹进行搜索/替换。
+
+##18.跳转（Jumping）
+
+Sublime Text提供了强大的跳转功能使得我们可以在不同的文件/方法/函数中无缝切换。就我的使用经验而言，目前还没有哪一款编辑器可以在这个方面超越Sublime Text。
+
+###18.1跳转到文件
+
+Ctrl + P 会列出当前打开的文件（或者是当前文件夹的文件），输入文件名然后 Enter 跳转至该文件。
+
+需要注意的是，Sublime Text使用模糊字符串匹配（Fuzzy String Matching），这也就意味着你可以通过文件名的前缀、首字母或是某部分进行匹配：例如， EIS 、 Eclip 和 Stupid 都可以匹配 EclipseIsStupid.java 。
+![img](http://img1.tuicool.com/ZV3aE3v.gif)
+
+###18.2跳转到符号
+
+尽管是一个文本编辑器，Sublime Text能够对代码符号进行一定程度的索引。 Ctrl + R 会列出当前文件中的符号（例如类名和函数名，但无法深入到变量名），输入符号名称 Enter 即可以跳转到该处。此外，还可以使用 F12 快速跳转到当前光标所在符号的定义处（Jump to Definition）。
+![img](http://img2.tuicool.com/AZzueq.gif)
+比较有意思的是，对于Markdown， Ctrl + R 会列出其大纲，非常实用。
+![img](http://img0.tuicool.com/YVRfua.jpg)
+
+###18.3跳转到某行
+
+Ctrl + G 然后输入行号以跳转到指定行：
+![img](http://img1.tuicool.com/eI3IBb.gif)
+
+###18.4组合跳转
+
+在 Ctrl + P 匹配到文件后，我们可以进行后续输入以跳转到更精确的位置：
+
+>@ 符号跳转：输入 @symbol 跳转到 symbol 符号所在的位置  
+># 关键字跳转：输入 #keyword 跳转到 keyword 所在的位置  
+>: 行号跳转：输入 :12 跳转到文件的第12行。  
+
+![img](http://img2.tuicool.com/nU3e6z.gif)
+所以Sublime Text把 Ctrl + P 称之为 “Go To Anything” ，这个功能如此好用，以至于我认为没有其它编辑器能够超越它。
+
+##19.文件夹（Folders）
+
+Sublime Text支持以文件夹做为单位进行编辑，这在编辑一个文件夹下的代码时尤其有用。在 File 下 Open Folder ：
+![img](http://img2.tuicool.com/AzInym.jpg)
+你会发现右边多了一个侧栏，这个侧栏列出了当前打开的文件和文件夹的文件，使用 Ctrl + K, Ctrl + B 显示或隐藏侧栏，使用 Ctrl + P 快速跳转到文件夹里的文件。
+
+编辑代码时我们经常会开多个窗口，所以分屏很重要。 Alt + Shift + 2 进行左右分屏， Alt + Shift + 8 进行上下分屏， Alt + Shift + 5 进行上下左右分屏（即分为四屏）。
+![img](http://img0.tuicool.com/MFnEz2.gif)
+
+分屏之后，使用 Ctrl + 数字键 跳转到指定屏，使用 Ctrl + Shift + 数字键 将当前屏移动到指定屏。例如， Ctrl + 1 会跳转到1屏，而 Ctrl + Shift + 2 会将当前屏移动到2屏。
+
+##20.全屏（Full Screen）
+
+Sublime Text有两种全屏模式：普通全屏和无干扰全屏。
+
+个人强烈建议在开启全屏前关闭菜单栏（Toggle Menu），否则全屏效果会大打折扣。
+F11 切换普通全屏：
+![img](http://img1.tuicool.com/YfaQVrN.jpg)
+Shift + F11 切换无干扰全屏：
+![img](http://img2.tuicool.com/uAVbMb.jpg)
+
+##21.自动完成（Auto Completion）
+Sublime Text 支持一定的自动完成，按 Tab 自动补全。
+![img](http://img2.tuicool.com/MveQ3e.jpg)
+
+##22.括号（Brackets）
+
+编写代码时会碰到大量的括号，利用 Ctrl + M 可以快速的在起始括号和结尾括号间切换， Ctrl + Shift + M 则可以快速选择括号间的内容，对于缩进型语言（例如Python）则可以使用 Ctrl + Shift + J 。
+![img](http://img0.tuicool.com/ZRnEBj7.gif)
+
+此外，我使用 BracketHighlighter 插件以高亮显示配对括号以及当前光标所在区域，效果如下
+![img](http://img1.tuicool.com/Qf22ai6.gif)
+
+##23.命令行（Command Line）
+尽管提供了Python控制台，但Sublime Text的控制台仅支持单行输入，十分不方便，所以我使用 Sublime REPL 以进行一些编码实验（Experiments）。
+![img](http://img2.tuicool.com/eQZB7zR.gif)
+
+注：本文部分内容转载[http://www.tuicool.com/articles/AJR7Rn3](http://www.tuicool.com/articles/AJR7Rn3)

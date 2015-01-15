@@ -32,7 +32,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;overflow-x:hidden;_height:100%;background-color: #FFFFFA;}
+body {font-family: "Century Gothic","Lucida Grande","Microsoft YaHei","Trebuchet MS",Helvetica,Georgia,sans-serif;font-size:16px;overflow-x:hidden;_height:100%;background-color: #FFFFFA;}
 a {color:#4A75B5;text-decoration:none;outline:none;
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;

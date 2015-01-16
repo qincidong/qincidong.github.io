@@ -12,12 +12,12 @@ tags: myeclipse tomcat project rename tools
 ![http://uploadingit.com/file/7na3tzwbi534s80k/1.png](http://uploadingit.com/file/7na3tzwbi534s80k/1.png)
 
 但是，添加工程到tomcat时，显示的名称并不是想要的。如下：
-![http://uploadingit.com/file/view/kwwuvj7ggj1btt9a/2.png](http://uploadingit.com/file/view/kwwuvj7ggj1btt9a/2.png)
+![http://uploadingit.com/file/view/kwwuvj7ggj1btt9a/2.png](http://uploadingit.com/file/kwwuvj7ggj1btt9a/2.png)
 
 那么，怎么修改名称呢？？  
 找到工程目录下的.mymetadata文件，打开，可以看到：  
-![http://uploadingit.com/file/view/fjjvweei08zwmnum/3.png](http://uploadingit.com/file/view/fjjvweei08zwmnum/3.png)
+![http://uploadingit.com/file/view/fjjvweei08zwmnum/3.png](http://uploadingit.com/file/fjjvweei08zwmnum/3.png)
 修改context-root就OK了。
 
 修改后就正常了。  
-![img](http://uploadingit.com/file/view/vlxebzzddh00aiqt/4.png)
+![img](http://uploadingit.com/file/vlxebzzddh00aiqt/4.png)

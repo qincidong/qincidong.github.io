@@ -323,9 +323,9 @@ Sublime Text 支持一定的自动完成，按 Tab 自动补全。
 6.在color scheme查看你所用的配色类型，我用的是Monokai
 ![img](http://segmentfault.com/img/bVbZ4v)
 
-7.在Color Scheme - Default文件中找到你所使用的配色文件（我的是Monokai.tmTheme），打开
+7.在Color Scheme - Default文件中找到你所使用的配色文件（我的是Monokai.tmTheme），打开     
 8.添加以下代码。
-<pre>
+{% highlight html %}
 <dict>
         <key>name</key>
         <string>Bracket Curly</string>
@@ -337,9 +337,9 @@ Sublime Text 支持一定的自动完成，按 Tab 自动补全。
             <string>#A6E22E</string>
         </dict>
 </dict>
-</pre>
+{% endhighlight %}
 通过添加这样的代码块并修改颜色和样式名称，获得自己喜欢的高亮提示。
 
 注：本文部分内容转载：  
-[http://www.tuicool.com/articles/AJR7Rn3](http://www.tuicool.com/articles/AJR7Rn3)
+[http://www.tuicool.com/articles/AJR7Rn3](http://www.tuicool.com/articles/AJR7Rn3)  
 [http://segmentfault.com/blog/taotao123/1190000000437871](http://segmentfault.com/blog/taotao123/1190000000437871)

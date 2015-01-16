@@ -209,4 +209,5 @@ var str=$('#username). fieldSerialize();
 alert(str);
 {% endhighlight %}
 
+最后，特别说明一点，$.ajax支持的属性和事件都可以用在ajaxSubmit。比如timeout,error等。
 注：本文转载[http://www.open-open.com/lib/view/open1325032463827.html](http://www.open-open.com/lib/view/open1325032463827.html)

@@ -307,4 +307,39 @@ Sublime Text 支持一定的自动完成，按 Tab 自动补全。
 尽管提供了Python控制台，但Sublime Text的控制台仅支持单行输入，十分不方便，所以我使用 Sublime REPL 以进行一些编码实验（Experiments）。
 ![img](http://img2.tuicool.com/eQZB7zR.gif)
 
-注：本文部分内容转载[http://www.tuicool.com/articles/AJR7Rn3](http://www.tuicool.com/articles/AJR7Rn3)
+##24.sublime text2 中标签高亮效果BracketHighlighter插件
+1、打开package Control，选择install Package
+![img](http://segmentfault.com/img/bVbZ4t)
+
+2.输入BracketHighlighter，回车
+
+3.这样该插件会自动安装，安装后所有的提示高亮都是白色或没有提示。按 preferences-->package settings-->Bracket highlighter-->Bracket settings-Default会打开一个文件
+
+4.将"bracket_styles"中的style改为hightlight
+
+5.将"bracket_styles"以下的样式类型去掉注释
+![img](http://segmentfault.com/img/bVbZ4u)
+
+6.在color scheme查看你所用的配色类型，我用的是Monokai
+![img](http://segmentfault.com/img/bVbZ4v)
+
+7.在Color Scheme - Default文件中找到你所使用的配色文件（我的是Monokai.tmTheme），打开
+8.添加以下代码。
+<pre>
+<dict>
+        <key>name</key>
+        <string>Bracket Curly</string>
+        <key>scope</key>
+		<string>brackethighlighter.curly</string>
+        <key>settings</key>
+        <dict>
+            <key>foreground</key>
+            <string>#A6E22E</string>
+        </dict>
+</dict>
+</pre>
+通过添加这样的代码块并修改颜色和样式名称，获得自己喜欢的高亮提示。
+
+注：本文部分内容转载：  
+[http://www.tuicool.com/articles/AJR7Rn3](http://www.tuicool.com/articles/AJR7Rn3)
+[http://segmentfault.com/blog/taotao123/1190000000437871](http://segmentfault.com/blog/taotao123/1190000000437871)

@@ -340,6 +340,13 @@ Sublime Text 支持一定的自动完成，按 Tab 自动补全。
 {% endhighlight %}
 通过添加这样的代码块并修改颜色和样式名称，获得自己喜欢的高亮提示。
 
+##25.SublimeCodeIntel插件
+SublimeCodeIntel插件实现的功能：  
+1.代码提示；可以提示HTML的属性，CSS样式等。输入一个字符，自动提示；  
+![代码自动提示](http://uploadingit.com/file/jojrq5a64y9ykspn/sublime_text_code_intel_1.png)
+2.跳转到变量定义的地方。选中变量，按ctrl+f3.  
+
+
 注：本文部分内容转载：  
 [http://www.tuicool.com/articles/AJR7Rn3](http://www.tuicool.com/articles/AJR7Rn3)  
 [http://segmentfault.com/blog/taotao123/1190000000437871](http://segmentfault.com/blog/taotao123/1190000000437871)

@@ -4,7 +4,7 @@ title:  sublime text使用
 description: 介绍使用sublime text提高工作效率
 date:   2015-01-09 16:49:39
 categories: blog
-tags: sublime tools
+tags: sublime tools emmet zen-code
 ---
 ##1.下载Sublime text
 请自行百度下载，稳定版是Sublime text2。不过Sublime text3有更多高级功能。
@@ -35,6 +35,7 @@ Emmet 项目的前身是前端开发人员熟知的 Zen Coding（快速编写 HT
 找到emmet，回车等待安装。安装后需要重启Sublime Text。  
 
 ##4.Emmet插件的使用
+emmet插件，原名Zen-code，使用说明：[http://www.cnblogs.com/cobby/archive/2012/05/09/2492473.html](http://www.cnblogs.com/cobby/archive/2012/05/09/2492473.html)  
 1）快速生成HTML5文件
 a)第一种方式是输入html:5，然后按tab键/ctrl+e。  
 b)第二种方式是输入一个!，然后按tab键/ctrl+e。  

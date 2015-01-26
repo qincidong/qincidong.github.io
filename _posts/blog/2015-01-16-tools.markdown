@@ -19,3 +19,16 @@ tags: tools
 
 ##3.360极速浏览器
 推荐它是因为速度快，且占用资源相对Chrome小很多。
+
+##4.emmet插件
+emmet是一个代码快速生成的插件，可以在Notepad++,Sublime Text,Ecipse上使用。  
+比如输入：  
+div.header+div.content+div.footer  
+生成：
+{% highlight html %}
+<div class="header"></div>
+<div class="content"></div>
+<div class="footer"></div>
+{% endhighlight %}
+
+地址：[https://github.com/emmetio](https://github.com/emmetio)

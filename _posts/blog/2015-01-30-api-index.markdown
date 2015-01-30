@@ -1,0 +1,12 @@
+---
+layout: post
+title:  API大全
+description: 各种API
+date:   2015-01-30 16:58:39
+categories: blog
+tags: api
+---
+##1.JSTL标签
+###<fmt:formatNumber>标签
+[http://www.w3cschool.cc/jsp/jstl-format-formatnumber-tag.html](http://www.w3cschool.cc/jsp/jstl-format-formatnumber-tag.html)
+

@@ -16,12 +16,12 @@ UID       Money
 4	       6666
 
 想要以Money排序取得排行号：SQL文如下：
-{% highlight sql %}
+<pre>
 Select UID,(@rowNum:=@rowNum+1) as rowNo
 From a,
 (Select (@rowNum :=0) ) b
 Order by a.Money Desc
-{% endhighlight %}
+</pre>
 
 输入结果如下：  
 UID	       rowNo
@@ -34,14 +34,14 @@ UID	       rowNo
 
 hibernate下获取mysql表中的rownum所遇bug  
 在项目中，想要获取mysql的行号，好不容易进行查找进行转换可以得到行号，语句类似于
-{% highlight sql %}
+<pre>
 SELECT
 	(@rownum := @rownum + 1) AS rownum,
 	t.*
 FROM
 	t_gls_familypic_record t,
 	(SELECT(@rownum := 0)) AS s;
-{% endhighlight %}
+</pre>
     
 在mysql(5.X版本)中的sql编辑器中可以运行通过，但是在java程序中却抛出异常:org.hibernate.QueryException: Space is not allowed after parameter prefix ':' ....
 
@@ -68,17 +68,17 @@ FROM
 
 我目前使用的是第2种方式。
 我的需求是计算排名，所以需要使用到行号，但是MySQL又没有提供rownum这样的东西。所以通过下面的方式实现：  
-{% highlight sql %}
+<pre>
 SELECT
 	(@rownum := @rownum + 1) AS rownum,
 	t.*
 FROM
 	t_gls_familypic_record t,
 	(SELECT(@rownum := 0)) AS s;
-{% endhighlight %}
+</pre>
 
 所以我最终的sql是这样的：  
-{% highlight java %}
+<pre>
 String sql = "select * from ("
     +"select (@rowNum/*'*/:=/*'*/@rowNum+1) as rowNo,t.* from ("
     +"select a.NICKNAME,a.PHOTOURL,a.MEMBERID,b.voteCount from t_member a,("
@@ -89,4 +89,4 @@ query.setParameter("activityid", activityid);
 query.setParameter("memberid", memberid);
 
 return query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP).setFirstResult(currentIndex).setMaxResults(maxResult).list();
-{% endhighlight %}
+</pre>

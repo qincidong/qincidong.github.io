@@ -34,9 +34,16 @@ UID	       rowNo
 
 hibernate下获取mysql表中的rownum所遇bug  
 在项目中，想要获取mysql的行号，好不容易进行查找进行转换可以得到行号，语句类似于
-“set @rownum=0, @preval=null; select @rnk:=IF((@rownum := @rownum + 1) and (@preval <=> sal),
- @rnk, @rownum) AS rnk, @preval:=sal sal FROM emp order by sal;”  
- 在mysql(5.X版本)中的sql编辑器中可以运行通过，但是在java程序中却抛出异常:org.hibernate.QueryException: Space is not allowed after parameter prefix ':' ....
+{% highlight sql %}
+SELECT
+	(@rownum := @rownum + 1) AS rownum,
+	t.*
+FROM
+	t_gls_familypic_record t,
+	(SELECT(@rownum := 0)) AS s;
+{% endhighlight %}
+    
+在mysql(5.X版本)中的sql编辑器中可以运行通过，但是在java程序中却抛出异常:org.hibernate.QueryException: Space is not allowed after parameter prefix ':' ....
 
 在网上 查找了资料，却发现这是hibernate3.X包之下的一个bug,(参照 id=41741)在hibernate4.X中已经修复。但是项目中不可能使用hibernate4.0，最后不能不使用原生jdbc进行解决...  
 转载：[http://www.educity.cn/wenda/404196.html](http://www.educity.cn/wenda/404196.html)

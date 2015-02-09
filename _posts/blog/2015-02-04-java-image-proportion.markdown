@@ -8,7 +8,7 @@ tags: java 图片缩放
 ---
 需求：用户在手机上传一张图片，上传后在后台将图片缩放到750px，如果缩放后的高度>420px，则让用户在页面裁剪高度。  
 代码如下：
-{% highlight java %}
+<pre>
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -87,7 +87,7 @@ public class ImageUtil {
 	}
 
 }
-{% endhighlight %}
+</pre>
 
 更多图片裁剪，缩放请参考：  
 [http://www.iteye.com/topic/266585](http://www.iteye.com/topic/266585)  

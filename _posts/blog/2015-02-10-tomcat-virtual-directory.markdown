@@ -64,7 +64,7 @@ Host的 appBase:表示该主机绑定的文件存放路径,可以使用相对路
 <Host appBase="webapps"
         unpackWARs="true" autoDeploy="true"
         xmlValidation="false" xmlNamespaceAware="false">
-<Context path="/cqq" docBase="f:\java\cqqapp" debug="0" reloadable="true" crossContext="true"> 
+    <Context path="/cqq" docBase="f:\java\cqqapp" debug="0" reloadable="true" crossContext="true"> 
    </Host>
 {% endhighlight %}
    
@@ -77,14 +77,14 @@ servlet都 放在了f:\java\cqqapp这个目录下了。
 完整配置文档如下，这样在输入域名后（）就可以直接访问你 Innovate项目了  
 
 {% highlight xml %}
-    <Engine defaultHost="www.ww.org.cn">
-     <Host debug="0" appBase="webapps"
-            unpackWARs="true" autoDeploy="true"
-            xmlValidation="false" xmlNamespaceAware="false">
-            <Context path="" docBase="D:\tomcat\webapps\Innovate" degug="0" reloadable="true"     crossContext="true"></Context>
-      </Host>
-    </Engine>
-{% endhighlight %}    
+<Engine defaultHost="www.ww.org.cn">
+ <Host debug="0" appBase="webapps"
+        unpackWARs="true" autoDeploy="true"
+        xmlValidation="false" xmlNamespaceAware="false">
+        <Context path="" docBase="D:\tomcat\webapps\Innovate" degug="0" reloadable="true"     crossContext="true"></Context>
+  </Host>
+</Engine>
+{% endhighlight %}   
 
 8月7日Tomcat5.5 (6.0)配置-多域名绑定和虚拟目录  
 需要修改配置文件:Tomcat 5.5(6.0)\conf\server.xml  
@@ -94,13 +94,13 @@ server.xml 的修改方式如下:
 
 {% highlight xml %}
 <Connector port="8080" maxHttpHeaderSize="8192" maxThreads="150" minSpareThreads="25" maxSpareThreads="75" enableLookups="false" redirectPort="8443" acceptCount="100" connectionTimeout="20000" disableUploadTimeout="true" />
-{% endhighlight %}
+{% endhighlight %}  
 
 修改后:  
 
 {% highlight xml %}
 <Connector port="80" maxHttpHeaderSize="8192" maxThreads="150" minSpareThreads="25" maxSpareThreads="75" enableLookups="false" redirectPort="8443" acceptCount="100" connectionTimeout="20000" disableUploadTimeout="true" />
-{% endhighlight %}
+{% endhighlight %}  
 
 其实这里就是把port:8080,修改成port:80就可以了,其他的参数不变  
 
@@ -111,7 +111,7 @@ server.xml 的修改方式如下:
 <Engine >Catalina" defaultHost="localhost">
 <Host >localhost" appBase="webapps" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false" />
 </Engine>
-{% endhighlight %}
+{% endhighlight %}  
 
 当然这里我把注释代码统统删除掉了,省的碍眼  
 修改后:  
@@ -121,7 +121,7 @@ server.xml 的修改方式如下:
 <Host >www.cba.com appBase=="D:\cba" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false" />
 <Host >localhost" appBase="webapps" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false" />
 </Engine>
-{% endhighlight %}
+{% endhighlight %}  
 
 这里解释一下上面的配置  
 Engine 的 dafaultHost :表示访问该tomcat默认进入的主机,注意一定不能是localhost,不然别人通过你的ip访问,就会默认进入tomcat的管理界面.   在没有指定defualtHost的情况下还有另外一种方式指定：  
@@ -131,7 +131,7 @@ Tomcat5.5\conf\Catalina\对应的域名\ROOT.xml
 {% highlight xml %}
 <Context path="/" docBase="${catalina.home}/portal" debug="5" reloadable="true" crossContext="true">
 </Context>
-{% endhighlight %}
+{% endhighlight %}  
 
 Host 的 name:表示该主机绑定的域名,如果绑定localhost则可以通过在浏览器中输入localhost访问该Host.  
 Host的 appBase:表示该主机绑定的文件存放路径,可以使用相对路径或绝对路径.  
@@ -146,9 +146,9 @@ Host的 appBase:表示该主机绑定的文件存放路径,可以使用相对路
 <Host appBase="webapps"
         unpackWARs="true" autoDeploy="true"
         xmlValidation="false" xmlNamespaceAware="false">
-<Context path="/cqq" docBase="f:\java\cqqapp" debug="0" reloadable="true" crossContext="true"> 
-   </Host>
-{% endhighlight %}
+        <Context path="/cqq" docBase="f:\java\cqqapp" debug="0" reloadable="true" crossContext="true"> 
+</Host>
+{% endhighlight %}  
    
 Host 标记是用来配置虚拟主机的，就是可以多个域名指向一个tomcat，格式只要参考默认的就可以了。   
 context 是Host标记的子元素吧，表示一个虚拟目录，它主要有两个属性，path就相当于虚拟目录名字，   
@@ -157,12 +157,12 @@ servlet都 放在了f:\java\cqqapp这个目录下了。
 这样我就可以通过 http://127.0.0.1/cqq/ 访问我的这个虚拟目录了。  
 ===========================================================================  
 完整配置文档如下，这样在输入域名后（）就可以直接访问你 Innovate项目了  
-{% endhighlight %}
-    <Engine defaultHost="www.ww.org.cn">
-     <Host debug="0" appBase="webapps"
-            unpackWARs="true" autoDeploy="true"
-            xmlValidation="false" xmlNamespaceAware="false">
-            <Context path="" docBase="D:\tomcat\webapps\Innovate" degug="0" reloadable="true"     crossContext="true"></Context>
-      </Host>
-    </Engine>
-{% endhighlight %}    
+{% highlight xml %}
+<Engine defaultHost="www.ww.org.cn">
+ <Host debug="0" appBase="webapps"
+        unpackWARs="true" autoDeploy="true"
+        xmlValidation="false" xmlNamespaceAware="false">
+        <Context path="" docBase="D:\tomcat\webapps\Innovate" degug="0" reloadable="true"     crossContext="true"></Context>
+  </Host>
+</Engine>
+{% endhighlight %}  

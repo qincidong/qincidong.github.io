@@ -11,11 +11,11 @@ Tomcat5.5 (6.0)配置-多域名绑定和虚拟目录
 server.xml 的修改方式如下:  
 
 1.如果你要绑定网站,首先是要把tomcat的默认访问端口8080,修改成80  
-原始:
+原始:  
 <pre>
 <Connector port="8080" maxHttpHeaderSize="8192" maxThreads="150" minSpareThreads="25" maxSpareThreads="75" enableLookups="false" redirectPort="8443" acceptCount="100" connectionTimeout="20000" disableUploadTimeout="true" />
 </pre>
-修改后:
+修改后:  
 <pre>
 <Connector port="80" maxHttpHeaderSize="8192" maxThreads="150" minSpareThreads="25" maxSpareThreads="75" enableLookups="false" redirectPort="8443" acceptCount="100" connectionTimeout="20000" disableUploadTimeout="true" />
 </pre>
@@ -43,6 +43,7 @@ server.xml 的修改方式如下:
 Engine 的 dafaultHost :表示访问该tomcat默认进入的主机,注意一定不能是localhost,不然别人通过你的ip访问,就会默认进入tomcat的管理界面.   在没有指定defualtHost的情况下还有另外一种方式指定：  
 Tomcat5.5\conf\Catalina\对应的域名\ROOT.xml  
 这样也可以指定虚拟目录，配置内容如下：  
+
 <pre>
 <Context path="/" docBase="${catalina.home}/portal" debug="5" reloadable="true" crossContext="true">
 </Context>
@@ -56,6 +57,7 @@ Host的 appBase:表示该主机绑定的文件存放路径,可以使用相对路
 3.如果输入 则访问 D:\cba\ROOT 下的网站.  
 注意这里有一个ROOT目录需要创建,我们只要把网站放到相应的ROOT目录向下面,即可通过相应域名访问了.  
 这里面的参数还有很多,我也不是很清楚,不过这样做确实可以实现多域名绑定哈哈.而且网站页面修改了只要直接覆盖就可以了,tomcat可以自动更新类和页面,当然如果修改了web.xml或lib,则需要重启tomcat才可以.  
+  
 <pre>
 <Host appBase="webapps"
         unpackWARs="true" autoDeploy="true"
@@ -71,6 +73,7 @@ servlet都 放在了f:\java\cqqapp这个目录下了。
 这样我就可以通过 http://127.0.0.1/cqq/ 访问我的这个虚拟目录了。  
 ===========================================================================  
 完整配置文档如下，这样在输入域名后（）就可以直接访问你 Innovate项目了  
+
 <pre>
     <Engine defaultHost="www.ww.org.cn">
      <Host debug="0" appBase="webapps"
@@ -85,11 +88,13 @@ servlet都 放在了f:\java\cqqapp这个目录下了。
 server.xml 的修改方式如下:  
 1.如果你要绑定网站,首先是要把tomcat的默认访问端口8080,修改成80  
 原始:  
+
 <pre>
 <Connector port="8080" maxHttpHeaderSize="8192" maxThreads="150" minSpareThreads="25" maxSpareThreads="75" enableLookups="false" redirectPort="8443" acceptCount="100" connectionTimeout="20000" disableUploadTimeout="true" />
 </pre>
 
 修改后:  
+
 <pre>
 <Connector port="80" maxHttpHeaderSize="8192" maxThreads="150" minSpareThreads="25" maxSpareThreads="75" enableLookups="false" redirectPort="8443" acceptCount="100" connectionTimeout="20000" disableUploadTimeout="true" />
 </pre>
@@ -119,6 +124,7 @@ server.xml 的修改方式如下:
 Engine 的 dafaultHost :表示访问该tomcat默认进入的主机,注意一定不能是localhost,不然别人通过你的ip访问,就会默认进入tomcat的管理界面.   在没有指定defualtHost的情况下还有另外一种方式指定：  
 Tomcat5.5\conf\Catalina\对应的域名\ROOT.xml  
 这样也可以指定虚拟目录，配置内容如下：  
+
 <pre>
 <Context path="/" docBase="${catalina.home}/portal" debug="5" reloadable="true" crossContext="true">
 </Context>
@@ -132,6 +138,7 @@ Host的 appBase:表示该主机绑定的文件存放路径,可以使用相对路
 3.如果输入 则访问 D:\cba\ROOT 下的网站.  
 注意这里有一个ROOT目录需要创建,我们只要把网站放到相应的ROOT目录向下面,即可通过相应域名访问了.  
 这里面的参数还有很多,我也不是很清楚,不过这样做确实可以实现多域名绑定哈哈.而且网站页面修改了只要直接覆盖就可以了,tomcat可以自动更新类和页面,当然如果修改了web.xml或lib,则需要重启tomcat才可以.  
+  
 <pre>
 <Host appBase="webapps"
         unpackWARs="true" autoDeploy="true"

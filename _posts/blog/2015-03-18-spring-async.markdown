@@ -147,4 +147,4 @@ public class SpringAsyncTest {
 
 {% endhighlight %}
 
-注意：如果想要异步功能的化，要单独新建一个spring管理的类，不要与其他的Service层的类混用。
+注意：如果想要异步功能的化，要单独新建一个spring管理的类，不要与其他的Service层的类混用

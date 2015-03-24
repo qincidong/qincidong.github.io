@@ -41,3 +41,34 @@ Spring3.1提供Cache的是spring-context模块。ConcurrentMapCacheFactoryBean�
        </bean>
 </beans>
 {% endhighlight %}
+
+cacheManger中的caches可以配置多个。在使用Cache注解时指定缓存的位置。
+一个测试的Service：
+{% highlight java %}
+package com.hyxt.cache.ehcache.demo;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+
+/**
+ * Created by qince on 2015/3/24.
+ */
+@Service
+public class HelloService {
+    private final static Log LOG = LogFactory.getLog(HelloService.class);
+
+    @Cacheable(value = "dbCache",key = "'getMsg_' + #id")
+    public String getMsg(String id) {
+        LOG.info("call getMsg(id) by " + id);
+        return "hello " + id;
+    }
+
+    @CacheEvict(value = "dbCache",key = "'getMsg_' + #id")
+    public void updateMsg(String id) {
+        LOG.info("updateMsg by id " + id);
+    }
+}
+{% endhighlight %}

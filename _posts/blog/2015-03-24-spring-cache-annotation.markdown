@@ -115,33 +115,25 @@ public class HelloServiceTest {
 {% endhighlight %}
 
 3.1同样提供了两个注解：
-
 @Cacheable：负责将方法的返回值加入到缓存中
-
 @CacheEvict：负责清除缓存
 
 @Cacheable 支持如下几个参数：
-
 value：缓存位置名称，不能为空，如果使用EHCache，就是ehcache.xml中声明的cache的name
-
 key：缓存的key，默认为空，既表示使用方法的参数类型及参数值作为key，支持SpEL
-
 condition：触发条件，只有满足条件的情况才会加入缓存，默认为空，既表示全部都加入缓存，支持SpEL
 
 
 @CacheEvict 支持如下几个参数：
-
 value：缓存位置名称，不能为空，同上
-
 key：缓存的key，默认为空，同上
-
 condition：触发条件，只有满足条件的情况才会清除缓存，默认为空，支持SpEL
-
 allEntries：true表示清除value中的全部缓存，默认为false
 
 一般来说，我们的更新操作只需要刷新缓存中某一个值，所以定义缓存的key值的方式就很重要，最好是能够唯一，因为这样可以准确的清除掉特定的缓存，而不会影响到其它缓存值
 
 SpEL：Spring Expression Language
-
 关于SpEL的介绍，可以参考如下地址：
 [SpEL](http://static.springsource.org/spring/docs/3.1.0.M1/spring-framework-reference/html/expressions.html)
+
+参考：[Spring3.1 Cache注解](http://hanqunfeng.iteye.com/blog/1158824)

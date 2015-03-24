@@ -6,8 +6,7 @@ date:   2015-03-24 15:21:39
 categories: blog
 tags: spring cache
 ---
-Spring3.1提供Cache的是spring-context模块。ConcurrentMapCacheFactoryBean提供获取缓存的功能ConcurrentMapCache。  
-跟踪堆栈发现它实际上最终是通过ConcurrentMap来实现的。  
+必须引入ehcache-core-2.5.0.jar，同时spring的jar包需要升级到3.1 
 配置文件applicationContext-cache-annotation.xml：
 
 {% highlight xml %}
@@ -28,6 +27,27 @@ Spring3.1提供Cache的是spring-context模块。ConcurrentMapCacheFactoryBean�
     <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cache-manager-ref="ehcache" />
     <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" p:config-location="classpath:/ehcache.xml" />
 </beans>
+{% endhighlight %}
+
+ehcache.xml:
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+         monitoring="autodetect">
+    <!--
+    <diskStore path="java.io.tmpdir" /> -->
+    <diskStore path="d:/cachetmpdir"/>
+    <defaultCache maxElementsInMemory="10000" eternal="false"
+                  timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
+                  maxElementsOnDisk="10000000" diskPersistent="false"
+                  diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="dbCache" maxElementsInMemory="10000"
+           maxElementsOnDisk="1000" eternal="false" overflowToDisk="true"
+           diskSpoolBufferSizeMB="20" timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU" />
+</ehcache>
 {% endhighlight %}
 
 cacheManger中的caches可以配置多个。在使用Cache注解时指定缓存的位置。

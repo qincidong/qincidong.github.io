@@ -72,3 +72,44 @@ public class HelloService {
     }
 }
 {% endhighlight %}
+
+测试类：
+{% highlight java %}
+package com.hyxt.cache.ehcache.demo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import static org.junit.Assert.*;
+
+public class HelloServiceTest {
+    private HelloService helloService;
+    @org.junit.Before
+    public void setUp() throws Exception {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext-cache-annotation.xml");
+        helloService = applicationContext.getBean(HelloService.class);
+    }
+
+    @org.junit.After
+    public void tearDown() throws Exception {
+        helloService = null;
+    }
+
+    @org.junit.Test
+    public void testGetMsg() throws Exception {
+        String msg = helloService.getMsg("10001");
+        System.out.println(msg);
+        msg = helloService.getMsg("10001");
+        System.out.println(msg);
+    }
+
+    @org.junit.Test
+    public void testUpdateMsg() throws Exception {
+        String msg = helloService.getMsg("10001");
+        System.out.println(msg);
+        helloService.updateMsg("10001");
+        msg = helloService.getMsg("10001");
+        System.out.println(msg);
+    }
+}
+{% endhighlight %}

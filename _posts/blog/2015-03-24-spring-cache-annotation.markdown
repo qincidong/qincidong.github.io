@@ -41,3 +41,5 @@ Spring3.1提供Cache的是spring-context模块。ConcurrentMapCacheFactoryBean�
 </beans>
 {% endhighlight %}
 
+cacheManger中的caches可以配置多个。在使用Cache注解时指定缓存的位置。
+一个测试的Service：

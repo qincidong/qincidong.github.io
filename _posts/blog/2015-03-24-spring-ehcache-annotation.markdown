@@ -6,7 +6,7 @@ date:   2015-03-24 15:21:39
 categories: blog
 tags: spring cache
 ---
-必须引入ehcache-core-2.5.0.jar，同时spring的jar包需要升级到3.1 
+必须引入ehcache-core-2.5.0.jar，同时spring的jar包需要升级到3.1  
 配置文件applicationContext-cache-annotation.xml：
 
 {% highlight xml %}

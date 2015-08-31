@@ -16,7 +16,7 @@ github_username:  qincidong
 
 # Build settings
 markdown: rdiscount
-highlight: light
+highlight: day
 
 # author
 author_name: luckystar

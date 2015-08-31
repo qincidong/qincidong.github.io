@@ -16,7 +16,7 @@ github_username:  qincidong
 
 # Build settings
 markdown: rdiscount
-highlight: doxy
+highlight: sunburst
 
 # author
 author_name: luckystar
